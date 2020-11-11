@@ -28,7 +28,7 @@
                             <button @click="showInput = !showInput">Modify item</button>
                             <input v-model="todos[index]" v-if="showInput" @keypress.enter="changeIndex(index); showInput = false">
                         </div>
-                        <div class="confirm-deletion" v-if="!showActions">
+                        <div class="confirm-deletion" v-else>
                             <span>Are you sure you want to delete this item?</span>
                             <button @click="deleteItem(index)">Yes</button>
                             <button @click="showActions = true">No</button>
