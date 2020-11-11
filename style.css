@@ -1,0 +1,11 @@
+ul {
+    font-size: 20px;
+    color: blue;
+    list-style-type: none;
+    margin: 50px;
+}
+
+ul li {
+    margin: 10px 0;
+    cursor: pointer;
+}
