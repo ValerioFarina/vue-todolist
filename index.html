@@ -9,7 +9,8 @@
     </head>
     <body>
         <div id="root">
-            <input v-model="newItem">
+
+            <input v-model="newItem" @keypress.enter="addNewItem">
             <button @click="addNewItem">Add to the list</button>
 
             <ul>
@@ -18,6 +19,7 @@
                     {{ todo }}
                 </li>
             </ul>
+            
         </div>
 
 
