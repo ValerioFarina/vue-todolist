@@ -1,12 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#user-input {
+    margin: 20px 0 0 40px;
+}
+
 ul {
     font-size: 20px;
     color: blue;
     list-style-type: none;
-    margin-top: 50px;
-    padding: 0;
+    margin: 50px 0 0 20px;
 }
 
-ul li {
-    margin: 10px 0;
+ul li span {
+    display: inline-block;
+    min-width: 200px;
     cursor: pointer;
+    padding: 10px 30px;
+    margin: 5px 0;
+}
+
+.actions {
+    display: inline-block;
 }

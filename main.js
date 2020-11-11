@@ -14,7 +14,11 @@ var app = new Vue({
             'item 7'
         ],
 
-        newItem : ''
+        newItem : '',
+
+        currentIndex : undefined,
+
+        showInput : false
 
     },
 
@@ -42,6 +46,15 @@ var app = new Vue({
         // this function deletes an item from the todo-list
         deleteItem(index) {
             this.todos.splice(index, 1);
+            this.currentIndex = undefined;
+        },
+
+        // this function changes the value of "currentIndex"
+        // the parameter "index" represents the position (within the todo-list) of the item the user has been click on
+        changeIndex(index) {
+            // if the item the user clicks on is already the current item, then this item ceases to be the current item (and thus we hide the corresponding buttons)
+            // if the item the user clicks on is not the current item, then this item becomes the current item (and thus we show the corresponding buttons)
+            this.currentIndex == index ? this.currentIndex = undefined : this.currentIndex = index;
         }
 
     }

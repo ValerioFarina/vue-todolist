@@ -10,16 +10,26 @@
     <body>
         <div id="root">
 
-            <input v-model="newItem" @keypress.enter="addNewItem">
-            <button @click="addNewItem">Add to the list</button>
+            <div id="user-input">
+                <input v-model="newItem" @keypress.enter="addNewItem">
+                <button @click="addNewItem">Add to the list</button>
+            </div>
 
             <ul>
-                <li v-for="(todo, index) in todos" @click="deleteItem(index)">
-                    <i class="fas fa-check"></i>
-                    {{ todo }}
+                <li v-for="(todo, index) in todos">
+                    <span @click="changeIndex(index); showInput = false">
+                        <i class="fas fa-check"></i>
+                        {{ todo }}
+                    </span>
+
+                    <div class="actions" v-if="currentIndex == index">
+                        <button @click="deleteItem(index)">Delete item</button>
+                        <button @click="showInput = !showInput">Modify item</button>
+                        <input v-model="todos[index]" v-if="showInput" @keypress.enter="changeIndex(index); showInput = false">
+                    </div>
                 </li>
             </ul>
-            
+
         </div>
 
 
