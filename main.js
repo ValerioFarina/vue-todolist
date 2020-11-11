@@ -12,11 +12,18 @@ var app = new Vue({
             'item 5',
             'item 6',
             'item 7'
-        ]
-        
+        ],
+
+        newItem : ''
+
     },
 
     methods : {
+
+        addNewItem() {
+            this.todos.push(this.newItem);
+            this.newItem = '';
+        }
 
     }
 

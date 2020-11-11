@@ -9,6 +9,9 @@
     </head>
     <body>
         <div id="root">
+            <input v-model="newItem">
+            <button @click="addNewItem">Add to the list</button>
+
             <ul>
                 <li v-for="todo in todos">
                     <i class="fas fa-check"></i>
