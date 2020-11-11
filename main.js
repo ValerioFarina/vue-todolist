@@ -18,7 +18,9 @@ var app = new Vue({
 
         currentIndex : undefined,
 
-        showInput : false
+        showInput : false,
+
+        showActions : true
 
     },
 
