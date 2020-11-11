@@ -15,6 +15,10 @@ ul {
     margin: 50px 0 0 20px;
 }
 
+.current {
+    background-color: rgba(144, 144, 144, 0.53);
+}
+
 ul li span {
     display: inline-block;
     min-width: 200px;
