@@ -34,6 +34,8 @@ var app = new Vue({
 
         // this function adds a new item to the todo-list (the new item will be a user input)
         addNewItem() {
+            // we remove whitespace from both sides of the string saved in newItem
+            this.newItem = this.newItem.trim();
             if (this.isInputValid(this.newItem)) {
                 // if the user input is valid, we add the user input to the todo-list
                 this.todos.push(this.newItem);
