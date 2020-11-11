@@ -23,6 +23,10 @@ var app = new Vue({
         addNewItem() {
             this.todos.push(this.newItem);
             this.newItem = '';
+        },
+
+        deleteItem(index) {
+            this.todos.splice(index, 1);
         }
 
     }

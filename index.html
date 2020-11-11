@@ -13,7 +13,7 @@
             <button @click="addNewItem">Add to the list</button>
 
             <ul>
-                <li v-for="todo in todos">
+                <li v-for="(todo, index) in todos" @click="deleteItem(index)">
                     <i class="fas fa-check"></i>
                     {{ todo }}
                 </li>
